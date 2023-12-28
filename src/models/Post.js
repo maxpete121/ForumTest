@@ -7,7 +7,6 @@ export const PostSchema = new Schema({
     subText: {type: String, required: true, maxLength: 80},
     body: {type: String, required: true, maxLength: 200},
     profileId: {type: Schema.Types.ObjectId, ref: 'Account'},
-
 },{toJSON: {virtuals: true}})
 
 

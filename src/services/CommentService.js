@@ -15,6 +15,12 @@ class CommentService{
         const createComment = await dbContext.Comments.create(newComment)
         return createComment
     }
+
+    async deleteComment(commentId){
+        const comment = await dbContext.Comments.findById(commentId)
+        comment.remove()
+        return `removed`
+    }
 }
 
 
